@@ -1,0 +1,84 @@
+.side-bar-menu{        
+    height: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.side-nav{
+    text-align: center;
+    padding-top: 50px;
+}
+
+.logo{
+    width: 25%; 
+    height: auto;
+}
+
+.list-item{
+    padding: 20px;
+    list-style-type: none;
+    text-align: start;
+}
+
+.item{
+    padding: 15px;
+    border-radius: 20px;    
+}
+
+.select{
+    background-color: #4a00ff;
+    color: white;
+}
+
+a{
+    text-decoration: none !important;
+    font-style: normal;
+    color: black;
+}
+
+.card-plan{
+    display: flex;
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #D3D3D3;
+    margin: 20px;
+    border-radius: 20px;    
+}
+
+
+.card-p{
+    font-style: italic;
+    font-size: 12px !important;
+}
+
+p{
+    font-size: 14px !important;
+    margin-bottom: 0.1rem !important;
+}
+
+.card-bar-progress{
+    margin-top: 1em;
+}
+
+span{    
+    text-align: end;
+    font-size: 10px;
+    float: right;
+    padding-top: 5px;
+}
+
+
+.btn-custom{
+    background-color: #4a00ff;
+    color: #fff;
+}
+
+ul li:hover,
+ul li:hover a{
+    background-color: #4a00ff;
+    color: #fff;
+}
+
+.icon-margin {
+    margin-right: 5px; /* Ajusta el valor según la separación que desees */
+}

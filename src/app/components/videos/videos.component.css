@@ -1,0 +1,54 @@
+table {
+    width: 100%;
+}
+
+.nav-link:hover {
+  border-bottom: 2px solid #4a00ff; /* Color de la línea al hacer hover */
+  color: #4a00ff;
+}
+
+.underline-hover {
+  border-bottom: 2px solid transparent; /* Color inicial de la línea */
+  transition: border-color 0.3s; /* Transición suave del color de la línea */
+  text-decoration: none; /* Para quitar el subrayado predeterminado del enlace */
+  color: inherit; /* Para heredar el color del texto del enlace */
+}
+
+.icon-margin {
+  margin-right: 5px; /* Ajusta el valor según la separación que desees */
+}
+
+.nav-link-button {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid white; /* Color del borde del botón */
+  text-decoration: none;
+  color: black;
+  background-color:  #D3D3D3; 
+  border-radius: 5px; 
+  margin: 2px;
+}
+
+/* Estilo para el botón al pasar el ratón */
+.nav-link-button:hover {
+  background-color: #4a00ff; /* Color de fondo al pasar el ratón */
+  color: #ffffff; /* Cambia el color del texto al pasar el ratón */
+}
+
+.icon-color{
+  color: #4a00ff;
+}
+
+.align-item{
+  display:flex
+}
+
+.btn-custom{
+  background-color: #4a00ff !important;
+  color: white;
+  margin-right: 20px;
+}
+
+.bi-arrow-left-short{
+  font-size: 1.5rem;;
+}

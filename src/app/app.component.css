@@ -1,0 +1,30 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    border: #fff;
+    background-color: #D3D3D3;
+  }
+  
+  .sidenav-content {
+    display: flex;
+    height: 100%;    
+    align-items: center;
+    justify-content: center;
+    border: #fff;
+    padding: 10px;
+  }
+  
+  .sidenav {
+    width: 300px;    
+    border-radius: 20px;
+    margin: 20px 40px 20px 20px !important;
+  }
+
+  .page-body{
+    padding: 20px;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    width: 100%;
+    margin: 20px 40px 20px 20px !important;
+  }

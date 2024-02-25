@@ -1,0 +1,28 @@
+<div class="side-bar-menu">
+    <div class="side-nav">
+        <img src="./assets/img/logo.jpeg" class="logo" alt="Logo">
+        <ul class="list-item">
+            <li class="item" *ngFor="let data of navData">
+                <a [routerLink]="[data.routeLink]"><i [class]="data.icon" class="link-with-padding icon-margin"></i>&nbsp; {{data.label}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="card-plan">
+        <div class="card-body">
+            <h6>Mi Plan - Plus</h6>        
+            <p class="card-p">El uso se renueva el 3-may-23</p>
+            <div class="card-bar-progress">
+               <p>Almacenamiento<span>23.5 GB/1TB</span></p>               
+               <mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
+            </div>
+            <div class="card-bar-progress">
+                <p>Banda Mensual<span>3.4 TB/5TB</span></p>
+                <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
+             </div>
+             <div class="card-bar-progress">                
+                <button type="button" class="btn btn-custom">Administrar Plan</button>                
+             </div>
+        </div>
+       
+    </div>
+</div>
