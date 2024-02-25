@@ -11,18 +11,24 @@ import { SelectionModel } from '@angular/cdk/collections';
   styleUrl: './videos.component.css'
 })
 export class VideosComponent implements OnInit {
-  public filterTbl:boolean=true;
+
+  public filterTbl:boolean=false;
   public itemSelect:string="";
 
-  public displayedColumns: string[] = []; // Inicializar directamente
-  public videosLibrary: VideoLibrary[] = [];
+  public videosLibrary: VideoLibrary[] = [];  
+  public videosData: VideoData[] = [];
+
   public dataSource = new MatTableDataSource<VideoLibrary>();
 
+
   public selection: SelectionModel<VideoLibrary> = new SelectionModel<VideoLibrary>(true, []);
-  
-  public displayedColumnsFiltered: string[] = [];
-  public videosData: VideoData[] = [];
   public selectionFilter: SelectionModel<VideoData> = new SelectionModel<VideoData>(true, []);
+
+ 
+  public displayedColumnsFiltered: string[] = [];
+  public displayedColumns: string[] = []; 
+
+
 
   constructor(private videoService: VideosService) { }
 
@@ -33,25 +39,25 @@ export class VideosComponent implements OnInit {
     this.displayedColumnsFiltered=['select', 'name', 'size', 'time', 'date'];
   }
 
-  isAllSelected() {
+  public isAllSelected() {
     const numSelected = this.selection.selected.length;
     const numRows = this.dataSource.data.length;
     return numSelected === numRows;
   }
 
-  masterToggle() {
+  public masterToggle() {
     this.isAllSelected() ?
       this.selection.clear() :
       this.dataSource.data.forEach(row => this.selection.select(row));
   }
 
-  selectItem(row: VideoLibrary) {
+  public selectItem(row: VideoLibrary) {
     this.videosData = this.videoService.getVideosInFolder(row.id);
     this.itemSelect = row?.name || 'name';
     this.filterTbl = !this.filterTbl;    
   }
 
-  backList(){
+  public backList(){
     this.filterTbl = !this.filterTbl;      
     this.selection.clear();
   }

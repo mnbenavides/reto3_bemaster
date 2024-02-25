@@ -1,4 +1,4 @@
-<div class="table"  [hidden]="!filterTbl">
+<div class="table"  [hidden]="filterTbl">
     <div class="row">
         <div class="col-md-4">
             <nav class="nav">
@@ -31,10 +31,9 @@
             <ng-container matColumnDef="select">
                 <th mat-header-cell *matHeaderCellDef>
                     <mat-checkbox (change)="$event ? masterToggle() : null"
-                                  [checked]="selection.hasValue() && isAllSelected()"
-                                  [indeterminate]="selection.hasValue() && !isAllSelected()">
+                                  [checked]="selection.hasValue() && isAllSelected()">
                     </mat-checkbox>
-                  </th>
+                </th>
                 <td mat-cell *matCellDef="let row">
                     <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
                         [checked]="selection.isSelected(row)"
@@ -74,7 +73,7 @@
 
 
 
-<div class="table-filter" [hidden]="filterTbl">
+<div class="table-filter" [hidden]="!filterTbl">
     <div class="row">
         <div class="col-md-6" class="align-item">
             <button (click)="backList()" type="button" class="btn btn-custom btn-sm"><i class="bi bi-arrow-left-short"></i>&nbsp;</button>
